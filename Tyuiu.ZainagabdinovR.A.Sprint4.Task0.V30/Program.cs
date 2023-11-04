@@ -18,7 +18,7 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task0.V30
             //Длина строки 75 символов
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #4                                                               *");
-            Console.WriteLine("* Тема: Использование операторов continue и break в циклах                *");
+            Console.WriteLine("* Тема: Одномерные массивы (статический ввод)                             *");
             Console.WriteLine("* Задание #4.0                                                            *");
             Console.WriteLine("* Вариант #30                                                             *");
             Console.WriteLine("* Выполнил: Зайнагабдинов Руслан Айратович | ИСТНб-23-1                   *");
@@ -33,12 +33,12 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task0.V30
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            int[] numsArray = { 9, 8, 4, 6, 9, };
+            int[] array = { 9, 8, 4, 6, 9, 4, 3, 6, 1, 2 };
 
             Console.WriteLine("Исходный массив:");
-            for (int i = 0; 1 <= numsArray.Length - 1; i++)
+            for (int i = 0; 1 <= array.Length - 1; i++)
             {
-                Console.WriteLine(numsArray[i]);
+                Console.WriteLine(array[i]);
             }
 
             Console.WriteLine("***************************************************************************");
@@ -46,11 +46,11 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task0.V30
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("Результурующий массив:");
 
-            int res = ds.GetSumEvenArrEl(numsArray);
+            array = ds.GetSumEvenArrEl(array);
 
-            for (int i = 0; i <= numsArray.Length - 1; i++)
+            for (int i = 0; i <= array.Length - 1; i++)
             {
-                Console.Write(numsArray[i] + "\t");
+                Console.Write(array[i] + "\t");
             }
 
             Console.WriteLine();

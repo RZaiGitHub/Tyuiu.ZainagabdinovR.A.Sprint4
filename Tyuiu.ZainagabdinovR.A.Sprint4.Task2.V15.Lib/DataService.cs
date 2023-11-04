@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 using tyuiu.cources.programming.interfaces.Sprint4;
 
-namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task0.V30.Lib
+namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task2.V15.Lib
 {
-    public class DataService : ISprint4Task0V30
+    public class DataService : ISprint4Task2V15
     {
-        public int GetSumEvenArrEl(int[] array)
+        public int Calculate(int[] array)
         {
             int sumArray = 0;
-            for (int i = 0; i <= array.Length - 1; i++)
+            for (int i = 2; i <= array.Length - 4
+                ; i++)
             {
-                if (array[i] % 2 == 0)
+                if (array[i] > 11)
                 {
                     sumArray += array[i];
                 }

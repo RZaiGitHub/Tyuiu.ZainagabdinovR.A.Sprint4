@@ -16,7 +16,7 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task1.V1.Lib
 
             for (int i = 0; i <= array.Length - 1; i++)
             {
-                if (array[i] < 10)
+                if (array[i] % 2 == 0)
                 {
                     sumArray += array[i];
                 }
