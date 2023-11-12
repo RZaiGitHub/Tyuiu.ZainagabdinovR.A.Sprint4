@@ -36,7 +36,7 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task0.V30
             int[] array = { 9, 8, 4, 6, 9, 4, 3, 6, 1, 2 };
 
             Console.WriteLine("Исходный массив:");
-            for (int i = 0; 1 <= array.Length - 1; i++)
+            for (int i = 0; i <= array.Length - 1; i++)
             {
                 Console.WriteLine(array[i]);
             }
