@@ -4,62 +4,65 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Tyuiu.ZainagabdinovR.A.Sprint4.Task1.V1.Lib;
+using Tyuiu.ZainagabdinovR.A.Sprint4.Task3.V26.Lib;
 
-namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task1.V1
+namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task3.V26
 {
     class Program
     {
         static void Main(string[] args)
         {
+            int[,] mtrx = new int [5, 5] { { 4, 3, 2, 6, 2 },
+                                          { 5, 2, 2, 5, 6 },
+                                          { 2, 5, 4, 5, 6 },
+                                          { 4, 5, 2, 4, 6 },
+                                          { 6, 5, 4, 3, 6 } };
+
+            int rows = mtrx.GetUpperBound(0) + 1;
+            int columns = mtrx.Length / rows;
+
+
+
+
             DataService ds = new DataService();
 
             Console.Title = "Спринт #4 | Выполнил: Зайнагабдинов Р. А. | ИСТНб-23-1";
             //Длина строки 75 символов
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #4                                                               *");
-            Console.WriteLine("* Тема: Одномерные массивы. (ввод с клавиатуры)                           *");
-            Console.WriteLine("* Задание #4.1                                                            *");
-            Console.WriteLine("* Вариант #1                                                              *");
+            Console.WriteLine("* Тема: Одномерные массивы. (генератор случайных чисел)                   *");
+            Console.WriteLine("* Задание #4.3                                                            *");
+            Console.WriteLine("* Вариант #26                                                             *");
             Console.WriteLine("* Выполнил: Зайнагабдинов Руслан Айратович | ИСТНб-23-1                   *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Дан одномерный целочисленный массив на 10 элементов заполненный         *");
-            Console.WriteLine("* статическими значениями в диапазоне от 0 до 9 подсчитать                *");
-            Console.WriteLine("* сумму четных элементов массива.                                         *");
-            Console.WriteLine("* { 8, 2, 7, 5, 0, 7, 4, 7, 5, 7 }                                        *");
+            Console.WriteLine("* Дан двумерный целочисленный массив 5 на 5 элементов,                    *");
+            Console.WriteLine("* заполненный статическими значениями в диапазоне от 2 до 6.              *");
+            Console.WriteLine("* Найдите максимальный элемент во второй строке массива.                  *");
             Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            int len;
-            Console.Write("Введите количество элементов массива: ");
-            len = Convert.ToInt32(Console.ReadLine());
-
-            int[] numsArray = new int[len];
-
-            for (int i = 0; i <= len-1; i++)
-            {
-                Console.Write("Введите значение " + i + " элемента массива: ");
-                numsArray[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            Console.WriteLine();
             Console.WriteLine("Массив: ");
-            for (int i = 0; i <= len - 1; i++)
+            for (int i = 0; i < rows; i++)
             {
-                Console.WriteLine(numsArray[i] + "\t");
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.Write($"{mtrx[i, j]} \t");
+                }
+
+                Console.WriteLine();
             }
-            Console.WriteLine();
-            Console.WriteLine();
+            
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            int res = ds.Calculate(numsArray);
+            int res = ds.Calculate(mtrx);
 
-            Console.WriteLine(res);
+            Console.WriteLine("Количество нулевых элементов = " + res);
             Console.ReadKey();
         }
     }

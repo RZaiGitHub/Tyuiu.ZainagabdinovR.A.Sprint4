@@ -14,7 +14,7 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task2.V15
         {
             DataService ds = new DataService();
 
-            Console.Title = "Спринт #3 | Выполнил: Зайнагабдинов Р. А. | ИСТНб-23-1";
+            Console.Title = "Спринт #4 | Выполнил: Зайнагабдинов Р. А. | ИСТНб-23-1";
             //Длина строки 75 символов
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #4                                                               *");
