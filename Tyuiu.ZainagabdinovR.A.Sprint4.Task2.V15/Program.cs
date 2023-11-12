@@ -56,7 +56,7 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task2.V15
 
             int res = ds.Calculate(numsArray);
 
-            Console.WriteLine("Количество четных элементов = " + res);
+            Console.WriteLine("Сумма четных элементов = " + res);
             Console.ReadKey();
         }
     }

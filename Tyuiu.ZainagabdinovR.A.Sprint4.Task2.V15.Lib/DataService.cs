@@ -13,12 +13,12 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task2.V15.Lib
         public int Calculate(int[] array)
         {
             int sumArray = 0;
-            for (int i = 2; i <= array.Length - 4
-                ; i++)
+
+            for (int i = 2; i <= array.Length - 4; i++)
             {
-                if (array[i] %2 == 0)
+                if (array[i] % 2 == 0)
                 {
-                    sumArray++;
+                    sumArray += array[i];
                 }
             }
             return sumArray;
