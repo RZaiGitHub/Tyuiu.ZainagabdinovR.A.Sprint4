@@ -62,7 +62,7 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task3.V26
 
             int res = ds.Calculate(mtrx);
 
-            Console.WriteLine("Количество нулевых элементов = " + res);
+            Console.WriteLine("Количество максимальных элементов = " + res);
             Console.ReadKey();
         }
     }
