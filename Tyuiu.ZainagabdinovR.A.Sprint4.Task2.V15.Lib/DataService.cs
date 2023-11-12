@@ -16,9 +16,9 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint4.Task2.V15.Lib
             for (int i = 2; i <= array.Length - 4
                 ; i++)
             {
-                if (array[i] > 11)
+                if (array[i] %2 == 0)
                 {
-                    sumArray += array[i];
+                    sumArray++;
                 }
             }
             return sumArray;
